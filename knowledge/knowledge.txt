@@ -1,0 +1,24 @@
+/*
+终极答案：优先从 resources 下找，但你现在是从 src 下找到的！
+底层真相：
+classpath: = 编译后的 target/classes 目录
+  Maven + SpringBoot 插件会自动把两个地方都打进 classpath：
+  src/main/java 下的 .xml
+  src/main/resources 下的所有文件
+
+  你的 XML 实际位置：
+  plaintext
+  src/main/java/com/atguigu/srb/core/mapper/xml/*.xml
+  但 SpringBoot 会自动把它复制到：
+  plaintext
+  target/classes/com/atguigu/srb/core/mapper/xml/
+  所以配置
+  yaml
+  classpath:com/atguigu/srb/core/mapper/xml/*.xml
+  才能找到！
+  最直白总结（背会）
+  classpath 不是 src，也不是 resources
+  classpath = target/classes
+  SpringBoot 会自动把 java 目录和 resources 目录的文件都放进 target/classes
+  所以你写的配置能找到 src 下的 XML
+*/
