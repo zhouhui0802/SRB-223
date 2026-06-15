@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service-base" />
         <module name="service-core" />
+        <module name="service-base" />
+        <module name="service-sms" />
         <module name="guigu-common" />
+        <module name="alibaba-easyexcel" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +20,7 @@
       <module name="guigu-common" options="-parameters" />
       <module name="service-base" options="-parameters" />
       <module name="service-core" options="-parameters" />
+      <module name="service-sms" options="-parameters" />
     </option>
   </component>
 </project>

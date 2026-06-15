@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SRB-223.iml" filepath="$PROJECT_DIR$/SRB-223.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-core.iml" filepath="$PROJECT_DIR$/service-core.iml" />
     </modules>
   </component>
 </project>

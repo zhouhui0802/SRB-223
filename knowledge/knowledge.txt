@@ -22,3 +22,20 @@ classpath: = 编译后的 target/classes 目录
   SpringBoot 会自动把 java 目录和 resources 目录的文件都放进 target/classes
   所以你写的配置能找到 src 下的 XML
 */
+
+但是一般来说，安全起见，需要将
+<build>
+    <!-- 项目打包时会将java目录中的*.xml文件也进行打包 -->
+    <resources>
+        <resource>
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+            <filtering>false</filtering>
+        </resource>
+    </resources>
+</build>放到pom里面
+
+因为maven工程在默认情况下src/main/java目录下的所有资源文件是不发布到target目录下的，
+因此我们需要在pom.xml中添加xml配置文件发布配置
